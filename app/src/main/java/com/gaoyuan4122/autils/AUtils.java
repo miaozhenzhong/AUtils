@@ -41,8 +41,8 @@ public class AUtils {
     }
 
     public static boolean isRunInMainThread() {
+        // return android.os.Process.myTid() == BaseApplication.getMainThread().getId();
         return Thread.currentThread() == BaseApplication.getMainThread();
-         // return android.os.Process.myTid() == BaseApplication.getMainThread().getId();
     }
 
     public static void runInMainThread(Runnable runnable) {
